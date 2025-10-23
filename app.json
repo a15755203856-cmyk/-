@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/product/product",
+    "pages/cart/cart",
+    "pages/checkout/checkout",
+    "pages/order/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "珠宝首饰购",
+    "navigationBarTextStyle": "black"
+  }
+}

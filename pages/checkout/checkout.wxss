@@ -1,0 +1,159 @@
+.checkout-page {
+  padding: 32rpx;
+  padding-bottom: 220rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.address-card,
+.items-card,
+.payment-card,
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+}
+
+.label {
+  width: 140rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.input {
+  flex: 1;
+  height: 72rpx;
+  border-radius: 16rpx;
+  background: #f4f4f4;
+  padding: 0 24rpx;
+  font-size: 28rpx;
+}
+
+.textarea {
+  flex: 1;
+  min-height: 160rpx;
+  border-radius: 16rpx;
+  background: #f4f4f4;
+  padding: 16rpx 24rpx;
+  font-size: 28rpx;
+}
+
+.items-card .item {
+  display: flex;
+  gap: 24rpx;
+}
+
+.items-card .thumb {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 16rpx;
+}
+
+.items-card .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.items-card .name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.items-card .meta {
+  font-size: 26rpx;
+  color: #7f7f7f;
+}
+
+.items-card .subtotal {
+  font-size: 26rpx;
+  color: #c28b37;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  padding: 24rpx;
+  border-radius: 16rpx;
+  background: #f7f7f7;
+}
+
+.payment-option.active {
+  background: rgba(212, 163, 115, 0.15);
+  border: 2rpx solid #d4a373;
+}
+
+.radio {
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  border: 2rpx solid #d4a373;
+}
+
+.radio.active {
+  background: #d4a373;
+}
+
+.label-text {
+  font-size: 28rpx;
+  color: #444444;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #555555;
+}
+
+.summary-row.total {
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 24rpx 32rpx calc(24rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(24rpx + env(safe-area-inset-bottom));
+  box-shadow: 0 -6rpx 24rpx rgba(0, 0, 0, 0.05);
+}
+
+.amount {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #c28b37;
+}
+
+.submit-button {
+  min-width: 220rpx;
+  text-align: center;
+  padding: 24rpx 0;
+  border-radius: 100rpx;
+  background: linear-gradient(135deg, #d4a373, #e6c68f);
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 600;
+}

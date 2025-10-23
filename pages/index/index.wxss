@@ -1,0 +1,157 @@
+.container {
+  padding: 32rpx;
+}
+
+.hero {
+  background: linear-gradient(135deg, #fef9f5, #ffffff);
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.hero-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #b98038;
+}
+
+.hero-subtitle {
+  font-size: 28rpx;
+  color: #7f7f7f;
+  margin-top: 8rpx;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+}
+
+.search-input {
+  flex: 1;
+  height: 72rpx;
+  border-radius: 72rpx;
+  background-color: #f2f2f2;
+  padding: 0 32rpx;
+  font-size: 28rpx;
+}
+
+.search-placeholder {
+  color: #bdbdbd;
+}
+
+.cart-entry {
+  position: relative;
+  min-width: 160rpx;
+  height: 72rpx;
+  border-radius: 72rpx;
+  background: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -12rpx;
+  right: -12rpx;
+  background: #d23c3c;
+  color: #ffffff;
+  border-radius: 50%;
+  min-width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+
+.category-scroll {
+  margin-top: 16rpx;
+}
+
+.category-wrapper {
+  display: flex;
+  gap: 16rpx;
+}
+
+.category-item {
+  padding: 12rpx 28rpx;
+  border-radius: 100rpx;
+  border: 2rpx solid transparent;
+  background: #f3f3f3;
+  color: #6f6f6f;
+  font-size: 26rpx;
+}
+
+.category-item.active {
+  background: rgba(210, 143, 60, 0.12);
+  border-color: #d28f3c;
+  color: #d28f3c;
+}
+
+.product-list {
+  margin-top: 32rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.product-card {
+  display: flex;
+  gap: 24rpx;
+}
+
+.product-image {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 16rpx;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.product-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.product-desc {
+  font-size: 26rpx;
+  color: #777777;
+  line-height: 1.5;
+  max-height: 80rpx;
+  overflow: hidden;
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.product-price {
+  display: flex;
+  align-items: baseline;
+  gap: 12rpx;
+}
+
+.original-price {
+  font-size: 24rpx;
+  color: #b3b3b3;
+  text-decoration: line-through;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80rpx 0;
+  color: #9f9f9f;
+}

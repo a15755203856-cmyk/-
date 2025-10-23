@@ -1,0 +1,69 @@
+<view class="cart-page">
+  <block wx:if="{{cartItems.length}}">
+    <view class="cart-list">
+      <block wx:for="{{cartItems}}" wx:key="productId">
+        <view class="cart-item card">
+          <view
+            class="selector"
+            data-product-id="{{item.productId}}"
+            bindtap="toggleItem"
+          >
+            <view class="selector-icon {{item.checked ? 'checked' : ''}}"></view>
+          </view>
+          <image class="thumb" src="{{item.product.images[0]}}" mode="aspectFill" />
+          <view class="item-info">
+            <view class="name">{{item.product.name}}</view>
+            <view class="price-row">
+              <text class="price">¥{{item.product.price}}</text>
+              <text class="qty">x{{item.quantity}}</text>
+            </view>
+            <view class="item-actions">
+              <view class="quantity-control">
+                <view
+                  class="quantity-btn"
+                  data-product-id="{{item.productId}}"
+                  bindtap="decreaseQuantity"
+                >
+                  -
+                </view>
+                <text class="quantity">{{item.quantity}}</text>
+                <view
+                  class="quantity-btn"
+                  data-product-id="{{item.productId}}"
+                  bindtap="increaseQuantity"
+                >
+                  +
+                </view>
+              </view>
+              <text
+                class="remove"
+                data-product-id="{{item.productId}}"
+                bindtap="removeItem"
+              >
+                移出
+              </text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <view wx:else class="empty-state card">
+    <view class="empty-title">购物车还是空的</view>
+    <view class="empty-desc">去首页挑选心仪的珠宝吧～</view>
+    <navigator url="/pages/index/index" class="primary-button">前往首页</navigator>
+  </view>
+
+  <view class="bottom-bar" wx:if="{{cartItems.length}}">
+    <view class="selector" bindtap="toggleAll">
+      <view class="selector-icon {{allChecked ? 'checked' : ''}}"></view>
+      <text>全选</text>
+    </view>
+    <view class="summary">
+      <view class="total-price">合计：¥{{totalPrice}}</view>
+      <view class="total-quantity">已选 {{totalQuantity}} 件</view>
+    </view>
+    <view class="checkout-button" bindtap="goToCheckout">去结算</view>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="hero card">
+    <view class="hero-text">
+      <view class="hero-title">珠宝首饰购</view>
+      <view class="hero-subtitle">严选全球好物，让闪耀触手可及</view>
+    </view>
+    <view class="hero-actions">
+      <input
+        class="search-input"
+        placeholder="搜索心仪的珠宝单品"
+        placeholder-class="search-placeholder"
+        value="{{searchKeyword}}"
+        bindinput="onSearchInput"
+      />
+      <view class="cart-entry" bindtap="goToCart">
+        <text class="cart-text">购物车</text>
+        <view wx:if="{{cartCount}}" class="cart-badge">{{cartCount}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="category card">
+    <view class="section-title">精选分类</view>
+    <scroll-view scroll-x enable-flex class="category-scroll">
+      <view class="category-wrapper">
+        <view
+          wx:for="{{categories}}"
+          wx:key="*this"
+          class="category-item {{item === activeCategory ? 'active' : ''}}"
+          data-category="{{item}}"
+          bindtap="onCategoryTap"
+        >
+          {{item}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="product-list">
+    <block wx:for="{{displayProducts}}" wx:key="id">
+      <navigator url="/pages/product/product?id={{item.id}}" class="product-card card">
+        <image class="product-image" src="{{item.images[0]}}" mode="aspectFill" />
+        <view class="product-info">
+          <view class="product-name">{{item.name}}</view>
+          <view class="product-desc">{{item.description}}</view>
+          <view class="product-tags">
+            <text wx:for="{{item.tags}}" wx:key="*this" class="tag">{{item}}</text>
+          </view>
+          <view class="product-price">
+            <text class="price">¥{{item.price}}</text>
+            <text class="original-price">¥{{item.originalPrice}}</text>
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <view wx:if="{{!displayProducts.length}}" class="empty-state">
+      暂无匹配的珠宝单品，换个关键词试试吧～
+    </view>
+  </view>
+</view>

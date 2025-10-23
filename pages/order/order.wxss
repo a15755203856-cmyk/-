@@ -1,0 +1,156 @@
+.order-page {
+  padding: 32rpx;
+  padding-bottom: 120rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.status-card {
+  background: linear-gradient(135deg, #fef5e7, #ffffff);
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.status {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #c28b37;
+}
+
+.meta {
+  font-size: 26rpx;
+  color: #7f7f7f;
+}
+
+.order-id {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #4f4f4f;
+}
+
+.copy {
+  color: #d28f3c;
+}
+
+.address-card,
+.items-card,
+.logistics-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.address-line {
+  font-size: 28rpx;
+  color: #555555;
+}
+
+.items-card .item {
+  display: flex;
+  gap: 24rpx;
+}
+
+.items-card .thumb {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 16rpx;
+}
+
+.items-card .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.items-card .name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.items-card .meta {
+  font-size: 26rpx;
+  color: #777777;
+}
+
+.items-card .subtotal {
+  font-size: 26rpx;
+  color: #c28b37;
+}
+
+.logistics-item {
+  display: flex;
+  gap: 24rpx;
+}
+
+.timeline {
+  position: relative;
+  width: 24rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  border: 4rpx solid #d4a373;
+  background: #ffffff;
+}
+
+.dot.active {
+  background: #d4a373;
+}
+
+.line {
+  position: absolute;
+  top: 28rpx;
+  left: 50%;
+  width: 4rpx;
+  bottom: -60rpx;
+  transform: translateX(-50%);
+  background: rgba(210, 143, 60, 0.3);
+}
+
+.logistics-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.logistics-info .status {
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.logistics-info .time {
+  font-size: 24rpx;
+  color: #9f9f9f;
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #4f4f4f;
+}
+
+.go-index {
+  margin-top: 16rpx;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 120rpx 0;
+  color: #9f9f9f;
+}

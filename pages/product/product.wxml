@@ -1,0 +1,53 @@
+<view wx:if="{{product}}" class="product-page">
+  <swiper class="gallery" indicator-dots indicator-color="#ffffff66" indicator-active-color="#ffffff" autoplay circular>
+    <block wx:for="{{product.images}}" wx:key="*this">
+      <swiper-item>
+        <image
+          class="gallery-image"
+          src="{{item}}"
+          mode="aspectFill"
+          data-current="{{item}}"
+          bindtap="previewImage"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="card product-summary">
+    <view class="name">{{product.name}}</view>
+    <view class="tags">
+      <text wx:for="{{product.tags}}" wx:key="*this" class="tag">{{item}}</text>
+    </view>
+    <view class="price-row">
+      <text class="price">¥{{product.price}}</text>
+      <text class="original-price">¥{{product.originalPrice}}</text>
+    </view>
+    <view class="description">{{product.description}}</view>
+  </view>
+
+  <view class="card spec-card">
+    <view class="section-title">商品参数</view>
+    <view class="spec-list">
+      <view class="spec-item" wx:for="{{specEntries}}" wx:key="key">
+        <text class="spec-label">{{item.key}}</text>
+        <text class="spec-value">{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card quantity-card">
+    <view class="section-title">购买数量</view>
+    <view class="quantity-controller">
+      <view class="quantity-button" bindtap="decreaseQuantity">-</view>
+      <text class="quantity">{{quantity}}</text>
+      <view class="quantity-button" bindtap="increaseQuantity">+</view>
+    </view>
+  </view>
+
+  <view class="action-bar">
+    <view class="action secondary" bindtap="goToCart">购物车</view>
+    <view class="action primary" bindtap="addToCart">加入购物车</view>
+  </view>
+</view>
+
+<view wx:else class="empty-state">商品信息加载中，请稍后...</view>
