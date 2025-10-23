@@ -1,0 +1,53 @@
+page {
+  background-color: #f7f7f7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+  color: #1f1f1f;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 32rpx 0 16rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.05);
+  padding: 24rpx;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #d4a373, #e6c68f);
+  color: #ffffff;
+  border-radius: 100rpx;
+  text-align: center;
+  padding: 24rpx 0;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.secondary-button {
+  border: 2rpx solid #d4a373;
+  color: #d4a373;
+  border-radius: 100rpx;
+  text-align: center;
+  padding: 24rpx 0;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.price {
+  color: #c28b37;
+  font-weight: 600;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(212, 163, 115, 0.15);
+  color: #c28b37;
+  padding: 8rpx 16rpx;
+  border-radius: 50rpx;
+  font-size: 24rpx;
+  margin-right: 16rpx;
+}
